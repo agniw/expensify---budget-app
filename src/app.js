@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 
 const Test = () => (
     <p> Hello routing </p> 
@@ -30,10 +30,10 @@ const NoFound = () => (
 const Header = () => (
     <div>
         <p> Expensify </p>
-        <Link to='/'> Home </Link>
-        <Link to='/entry'> Entry </Link>
-        <Link to='/edit'> Edit </Link>
-        <Link to='/help'> Help </Link>
+        <NavLink activeClassName='active' to='/' exact={true}> Home </NavLink>
+        <NavLink activeClassName='active' to='/entry'> Entry </NavLink>
+        <NavLink activeClassName='active' to='/edit'> Edit </NavLink>
+        <NavLink activeClassName='active' to='/help'> Help </NavLink>
     </div>
 )
 
